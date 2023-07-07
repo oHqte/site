@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DB_URI")
+}
+
+model posts {
+  slug      String   @id @db.VarChar(150)
+  title     String?  @default("") @db.VarChar(200)
+  timestamp DateTime @default(now()) @db.Timestamp(0)
+  time2read Int?     @default(1) @db.UnsignedInt
+  tags      Json     @default(dbgenerated("(_utf8mb4\\'[]\\')"))
+  views     Int?     @default(1) @db.UnsignedInt
+  body      String   @default(dbgenerated("(_utf8mb4\\'\\')")) @db.LongText
+}

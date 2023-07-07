@@ -1,0 +1,23 @@
+# node
+.DS_Store
+node_modules/
+
+# vscode
+.vscode/
+
+# sveltekit
+.svelte-kit/
+
+# vercel
+.vercel/
+.output/
+
+
+# vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# env
+.env*
+.dev.vars
+!.env.example

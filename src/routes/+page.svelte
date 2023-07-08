@@ -22,8 +22,7 @@
 	<IntroCard
 		props={{
 			title: "Hey, I'm ohqte!",
-			body:
-				"I'm ohqte – a Full-Stack Developer who is passionate about Data Science \
+			body: "I'm ohqte – a Full-Stack Developer who is passionate about Data Science \
 				& currently pursuing a degree in CS from Lorem Ipsum University. Have a good read!",
 
 			profiles: ["discord", "devto", "github", "mail"]

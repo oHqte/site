@@ -1,4 +1,4 @@
-import { prisma,prismaError } from "../client";
+import { prisma, prismaError } from "../client";
 
 interface createArgs {
 	slug: string;
@@ -9,7 +9,6 @@ interface createArgs {
 	views?: number;
 	body?: string;
 }
-
 
 /**
  * __create__ new post in database

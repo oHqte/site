@@ -1,7 +1,5 @@
 import { prisma, prismaSelect, prismaError } from "../client";
 import { error } from "@sveltejs/kit";
-import type { PostProps } from "$lib/types";
-
 
 interface fetchArgs {
 	slug: string;
@@ -16,7 +14,6 @@ interface fetchArgs {
 	};
 }
 
-
 /**
  * __fetch__ post from database
  * - __slug__ : `/blog/[slug]`
@@ -30,9 +27,9 @@ interface fetchArgs {
  *	   }
  * })
  */
-export async function fetch({ slug, select }: fetchArgs): Promise<PostProps> {
+export async function fetch({ slug, select }: fetchArgs) {
 	try {
-		const res: PostProps = await prisma.posts.findFirstOrThrow({
+		const res = await prisma.posts.findFirstOrThrow({
 			select: {
 				...prismaSelect,
 				...select

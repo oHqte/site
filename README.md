@@ -20,15 +20,14 @@
  </a>
 </p>
 
-
 ## 📖 intro
 
 > a mini fullstack site i made for my portfolio that implents the following technologies:
 >
-> - [mysql](https://www.mysql.com/ "MySQL-pscale")
-> - [prisma](https://www.prisma.io/ "prisma-ORM")
-> - [edge](https://vercel.com/features/edge-functions "vercel-edge")
-> - [sveltekit](https://kit.svelte.dev/ "sveltekit/svelte")
+> -   [mysql](https://www.mysql.com/ "MySQL-pscale")
+> -   [prisma](https://www.prisma.io/ "prisma-ORM")
+> -   [edge](https://vercel.com/features/edge-functions "vercel-edge")
+> -   [sveltekit](https://kit.svelte.dev/ "sveltekit/svelte")
 
 ### 🔍 todo
 
@@ -56,7 +55,7 @@
 >
 > incompleted documentation
 
-- setup a `.env` file in the following format:
+-   setup a `.env` file in the following format:
 
 ```properties
 # .env
@@ -70,16 +69,16 @@ AUTH_CLIENT_SECRET = "***-***"
 AUTH_SECRET = "***-***"
 ```
 
-- setup the following variables on the respective platforms:
+-   setup the following variables on the respective platforms:
 
-| variable             | platform                                                      |
-| -------------------- | ------------------------------------------------------------- |
-| `GISCUS_REPO`        | ![v](https://img.shields.io/badge/env-black?logo=vercel)      |
-| `AUTH_CLIENT_ID`     | ![v](https://img.shields.io/badge/env-black?logo=vercel)      |
-| `AUTH_CLIENT_SECRET` | ![v](https://img.shields.io/badge/env-black?logo=vercel)      |
-| `AUTH_SECRET`        | ![v](https://img.shields.io/badge/env-black?logo=vercel)      |
+| variable             | platform                                                 |
+| -------------------- | -------------------------------------------------------- |
+| `GISCUS_REPO`        | ![v](https://img.shields.io/badge/env-black?logo=vercel) |
+| `AUTH_CLIENT_ID`     | ![v](https://img.shields.io/badge/env-black?logo=vercel) |
+| `AUTH_CLIENT_SECRET` | ![v](https://img.shields.io/badge/env-black?logo=vercel) |
+| `AUTH_SECRET`        | ![v](https://img.shields.io/badge/env-black?logo=vercel) |
 
-- run the following commands to host site on localhost:
+-   run the following commands to host site on localhost:
 
 ```bash
 $ cd site/

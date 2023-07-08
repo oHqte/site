@@ -8,7 +8,7 @@ import rehypeStringify from "rehype-stringify";
 
 import DOMPurify from "isomorphic-dompurify";
 
-export const md2HTML = async (markdown: string) => {
+export const md2HTML = async (markdown: string | undefined) => {
 	const file = unified()
 		.use(remarkParse)
 		.use(remarkGfm)
@@ -16,7 +16,7 @@ export const md2HTML = async (markdown: string) => {
 		.use(rehypeHighlight)
 		.use(rehypeSlug)
 		.use(rehypeStringify)
-		.process(markdown);
+		.process(markdown ?? "");
 
 	return DOMPurify.sanitize(String(await file));
 };

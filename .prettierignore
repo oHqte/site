@@ -1,13 +1,23 @@
+# node
 .DS_Store
-node_modules
-/build
-/.svelte-kit
-/package
-.env
-.env.*
-!.env.example
+node_modules/
 
-# Ignore files for PNPM, NPM and YARN
+# pkg-manager
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
+
+# sveltekit
+.svelte-kit/
+
+# vercel
+.vercel/
+.output/
+
+# vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# env
+.env*
+!.env.example

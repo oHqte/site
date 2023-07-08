@@ -1,6 +1,5 @@
 import { prisma, prismaError } from "../client";
 
-
 /**
  * __remove__ a post the database
  * - __slug__ : `/blog/[slug]`
@@ -10,7 +9,7 @@ import { prisma, prismaError } from "../client";
  * 		slug:"git-push-force"
  * })
  */
-export async function remove({ slug }: { slug: string }):Promise<void> {
+export async function remove({ slug }: { slug: string }): Promise<void> {
 	try {
 		await prisma.posts.delete({
 			where: {

@@ -17,7 +17,6 @@
 					<div class="wrap5">
 						<Header
 							props={{
-								icon: "/favicon.png",
 								links: ["Home", "Blog", "Projects", "Connect"]
 							}}
 						/>

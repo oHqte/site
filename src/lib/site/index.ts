@@ -5,7 +5,6 @@ const info = {
 	desc: "I'm ohqte – a Full-Stack Developer who is passionate about Data Science & currently pursuing a degree in CS from Lorem Ipsum University."
 };
 
-
 const userLinks: { [index: string]: string } = {
 	mail: "mailto:ohqte@proton.me",
 	discord: "https://discord.com/users/1104263537553051690",

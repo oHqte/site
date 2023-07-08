@@ -13,17 +13,17 @@ type SomePostsProps = _SomePostsProps[];
  * @todo
  */
 interface AllPostsProps {
-	TODO :string;
+	TODO: string;
 }
 
 interface _PostProps {
-	slug: string;
-	title: string | null;
-	timestamp: Date | string;
-	time2read: number | null;
-	tags: Prisma.JsonValue | ArrayLike<string>;
+	slug?: string;
+	title?: string | null;
+	timestamp?: Date | string;
+	time2read?: number | null;
+	tags?: Prisma.JsonValue | ArrayLike<string>;
 	views: number | null;
-	body: string;
+	body?: string;
 }
 
 type PostProps = _PostProps | undefined;

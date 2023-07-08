@@ -1,4 +1,5 @@
 {
-	"$schema": "https://openapi.vercel.sh/vercel.json",
-	"devCommand": "vite dev --port 2000 --open"
+	"name": "site",
+	"devCommand": "vite dev --port 2000 --open",
+	"$schema": "https://openapi.vercel.sh/vercel.json"
 }

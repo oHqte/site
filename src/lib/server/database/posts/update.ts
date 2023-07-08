@@ -6,9 +6,8 @@ import { prisma, prismaError } from "../client";
  *  - backend: update a row in `posts` table
  */
 async function post() {
-	return
+	return;
 }
-
 
 /**
  * increment __views__ for a post in database

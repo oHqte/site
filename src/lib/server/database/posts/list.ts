@@ -1,6 +1,5 @@
 import { prisma, prismaSelect } from "../client";
 
-
 interface listArgs {
 	limit: number;
 	select?: {
@@ -26,7 +25,6 @@ interface listArgs {
  * })
  */
 export async function list({ limit = 3, select }: listArgs) {
-
 	const res = await prisma.posts.findMany({
 		select: {
 			...prismaSelect,

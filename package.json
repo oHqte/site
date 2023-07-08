@@ -8,6 +8,7 @@
 		"build": "vite build",
 		"build:dev": "vite build --mode development",
 		"preview": "vite preview",
+		"postinstall": "prisma generate",
 		"svelte-check": "svelte-check",
 		"lint:write": "prettier --plugin-search-dir . --write .",
 		"lint:check": "prettier --plugin-search-dir . --check . && eslint .",

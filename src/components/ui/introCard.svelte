@@ -1,23 +1,24 @@
 <script lang="ts">
-	import {icons} from "$lib/icons";
-	const icon = {
+	import type { IntroCardProps } from "$lib/types";
+	import { icons } from "$lib/icons";
+	import site from "$lib/site";
+
+	export let props: IntroCardProps;
+
+	const icon: { [index: string]: any } = {
 		discord: icons.discord,
 		devto: icons.devto,
 		github: icons.github,
 		mail: icons.mail
 	};
-	import site from "$lib/site";
-	import type { introCardPropsType } from "$lib/types";
-	export let props: introCardPropsType;
 </script>
 
 <main>
 	<h1>{props.title}</h1>
-	<p>{props.message} <span class="wave">👋</span></p>
+	<p>{props.body} <span class="wave">👋</span></p>
 	<div class="icons">
 		{#each props.profiles as profile}
 			<a href={site.userLinks[profile]}>
-				<!-- TODO: [LOW][TYPE] -->
 				<svelte:component this={icon[profile]} width="24" height="24" fill="#a1a1aa" />
 			</a>
 		{/each}

@@ -16,7 +16,7 @@
 	}}
 />
 
-<br/><br/>
+<br /><br />
 {#if $page.data.session}
 	<p class="auth_test">signed in as <code>{$page.data.session.user?.email}</code></p>
 {:else}
@@ -37,7 +37,7 @@
 			color: white;
 
 			&:hover {
-				opacity:0.8;
+				opacity: 0.8;
 			}
 		}
 
@@ -45,7 +45,7 @@
 			font-size: 16px;
 			font-family: var(--font-mono);
 
-			color:white;
+			color: white;
 			background-color: rgba(0, 0, 0, 0.2);
 
 			padding: 3.2px 4.8px;

@@ -1,8 +1,7 @@
 import adapter from "@sveltejs/adapter-vercel";
 import preprocess from "svelte-preprocess";
 
-
-const config =  {
+const config = {
 	preprocess: [
 		preprocess({
 			sass: true
@@ -11,7 +10,7 @@ const config =  {
 
 	kit: {
 		adapter: adapter({
-			runtime:"nodejs18.x",
+			runtime: "nodejs18.x"
 		}),
 		alias: {
 			$components: "src/components",

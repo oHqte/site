@@ -1,21 +1,51 @@
-import { prisma } from "../client"
+import { prisma, prismaSelect, prismaError } from "../client";
+import { error } from "@sveltejs/kit";
+import type { PostProps } from "$lib/types";
 
-type fetchArgs = { slug: string, select?: { slug?: boolean, title?: boolean, timestamp?: boolean, time2read?: boolean, tags?: boolean, views?: boolean, body?: boolean } }
-export async function fetch({ slug, select = { slug: true, title: true, timestamp: true, time2read: true, tags: false, views: false, body: false } }: fetchArgs) {
-    const res = await prisma.posts.findFirst({
-        select: {
-            slug: select.slug,
-            title: select.title,
-            timestamp: select.timestamp,
-            time2read: select.time2read,
-            tags: select.tags,
-            views: select.views,
-            body: select.body
-        },
-        where: {
-            slug: slug
-        }
-    })
 
-    return res;
+interface fetchArgs {
+	slug: string;
+	select?: {
+		slug?: boolean;
+		title?: boolean;
+		timestamp?: boolean;
+		time2read?: boolean;
+		tags?: boolean;
+		views?: boolean;
+		body?: boolean;
+	};
+}
+
+
+/**
+ * __fetch__ post from database
+ * - __slug__ : `/blog/[slug]`
+ * - __select__ : columns to select from database
+
+ * @example
+ * const res = await posts.fetch({
+ *     slug:"git-push-force",
+ *	   select: {
+ *		    body:true
+ *	   }
+ * })
+ */
+export async function fetch({ slug, select }: fetchArgs): Promise<PostProps> {
+	try {
+		const res: PostProps = await prisma.posts.findFirstOrThrow({
+			select: {
+				...prismaSelect,
+				...select
+			},
+			where: {
+				slug: slug
+			}
+		});
+		return res;
+	} catch (e) {
+		// note: split instanceof & e.code if need arises
+		if (e instanceof prismaError && e.code === "P2025") {
+			throw error(404, "Not Found");
+		}
+	}
 }

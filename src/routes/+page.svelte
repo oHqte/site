@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { IntroCard, LatestPosts } from "$components/ui";
+	import { IntroCard, SomePosts } from "$components/ui";
 	import site from "$lib/site";
 </script>
 
@@ -12,7 +12,6 @@
 	<meta content={site.info.desc} property="og:description" />
 	<meta content={site.info.name} property="og:site_name" />
 
-	<!-- <meta content={config.twitterHandle} name="twitter:creator" /> -->
 	<!-- <meta content="summary_large_image" name="twitter:card" /> -->
 	<meta content="{site.info.name} | Home" name="twitter:title" />
 	<meta content={site.info.desc} name="twitter:description" />
@@ -23,32 +22,32 @@
 	<IntroCard
 		props={{
 			title: "Hey, I'm ohqte!",
-			message:
+			body:
 				"I'm ohqte – a Full-Stack Developer who is passionate about Data Science \
 				& currently pursuing a degree in CS from Lorem Ipsum University. Have a good read!",
 
 			profiles: ["discord", "devto", "github", "mail"]
 		}}
 	/>
-	<LatestPosts
+	<SomePosts
 		props={[
 			{
-				title: "Undo a `git push --force`",
-				date: "Jan 1, 2023",
+				title: "Undo a `git push -f`",
+				timestamp: "Jan 1, 2023",
 				time2read: 0,
-				link: "/blog/git-push-force"
+				slug: "git-push-force"
 			},
 			{
 				title: "Setting-up github codespaces",
-				date: "Jan 1, 2023",
+				timestamp: "Jan 1, 2023",
 				time2read: 0,
-				link: "/blog/setup-gh-vm"
+				slug: "setup-gh-vm"
 			},
 			{
 				title: "Web3: overhyped.",
-				date: "Jan 1, 2023",
+				timestamp: "Jan 1, 2023",
 				time2read: 0,
-				link: "/blog/web3-overhyped"
+				slug: "web3-overhyped"
 			}
 		]}
 	/>

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { footerPropType } from "$lib/types";
-	export let props: footerPropType;
+	import type { FooterProps } from "$lib/types";
+	export let props: FooterProps;
 </script>
 
 <hr />

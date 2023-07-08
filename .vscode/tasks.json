@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "dev",
+			"detail": "vite dev",
+			"type": "npm",
+			"script": "dev",
+			"runOptions": {
+				"runOn": "folderOpen"
+			},
+			"icon": {
+				"id": "server"
+			},
+			"presentation": {
+				"clear": true,
+				"close": true,
+				"echo": false,
+				"focus": false,
+				"reveal": "silent",
+				"showReuseMessage": false
+			},
+			"hide": false,
+			"problemMatcher": []
+		}
+	]
+}

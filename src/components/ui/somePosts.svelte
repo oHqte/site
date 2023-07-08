@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { latestPostsPropType } from "$lib/types";
-	export let props: latestPostsPropType;
+	import type { SomePostsProps } from "$lib/types";
+	export let props: SomePostsProps;
 </script>
 
 <main>
@@ -9,11 +9,11 @@
 		<a class="btn" href="/blog">View all</a>
 	</h2>
 	<div class="post">
-		{#each props as blog}
+		{#each props as post}
 			<h3>
-				<a href={blog.link}>
-					{blog.title}
-					<p>{blog.date} · {blog.time2read} min read</p>
+				<a href="/blog/{post.slug}">
+					{post.title}
+					<p>{post.timestamp} · {post.time2read} min read</p>
 				</a>
 			</h3>
 		{/each}

@@ -1,4 +1,2 @@
-import posts from "./posts"
-import { PrismaError, prisma } from "./client"
-
-export { posts,prisma,PrismaError }
+import posts from "./posts";
+export { posts };

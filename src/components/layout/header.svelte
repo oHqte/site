@@ -1,7 +1,7 @@
 <script lang="ts">
-	import {Command} from "$lib/icons";
-	import type { headerPropsType } from "$lib/types";
-	export let props: headerPropsType;
+	import { Command } from "$lib/icons";
+	import type { HeaderProps } from "$lib/types";
+	export let props: HeaderProps;
 </script>
 
 <main>
@@ -16,7 +16,7 @@
 
 		<div class="cmd-picker">
 			<button title="coming soon...">
-				<Command width="20" height="20"/>
+				<Command width="20" height="20" />
 			</button>
 		</div>
 	</header>

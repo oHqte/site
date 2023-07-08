@@ -2,7 +2,7 @@
 	let fill = "none";
 	let width = "24";
 	let height = "24";
-	export { fill,width, height };
+	export { fill, width, height };
 </script>
 
 <svg

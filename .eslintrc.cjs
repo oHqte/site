@@ -1,6 +1,6 @@
 module.exports = {
 	rules: {
-		"@typescript-eslint/ban-ts-comment": ["error","@ts-error"]
+		"@typescript-eslint/ban-ts-comment": ["error", "@ts-error"]
 	},
 	root: true,
 	extends: [

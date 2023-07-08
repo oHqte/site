@@ -6,8 +6,7 @@ const info = {
 };
 
 
-
-const userLinks = {
+const userLinks: { [index: string]: string } = {
 	mail: "mailto:ohqte@proton.me",
 	discord: "https://discord.com/users/1104263537553051690",
 	devto: "https://dev.to/ohqte",

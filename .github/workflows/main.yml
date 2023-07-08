@@ -1,0 +1,16 @@
+name: vercel-deploy
+
+on:
+    workflow_dispatch:
+    # push:
+    #     branches:
+    #         - main
+    #     paths:
+    #         - "website/**"
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        name: Deploy
+        steps:
+            - run: echo "soon..."

@@ -4,17 +4,14 @@ import { defineConfig } from "vite";
 export default defineConfig({
 	server: {
 		port: 2000,
-		open: true,
+		open: true
 	},
 	preview: {
 		port: 4000,
-		open: true,
+		open: true
 	},
 	plugins: [sveltekit()],
 	optimizeDeps: {
 		exclude: ["@urql/core"]
-	},
-
-
-
+	}
 });
